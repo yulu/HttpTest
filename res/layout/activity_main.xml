@@ -1,14 +1,84 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dip"
+    android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+   	<TableLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:stretchColumns="1">   
+    <TableRow >
+    	<TextView
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:textStyle="bold"
+        	android:layout_gravity="center_vertical"
+        	android:text="@string/param" />
 
-</RelativeLayout>
+    	<Button
+    	    android:id="@+id/param_button"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:textSize="12sp"
+    	    android:layout_gravity="right|center_vertical"
+    	    android:text="@string/upload" />
+    </TableRow>	
+    <TableRow>
+        <TextView
+            android:id="@+id/param_detail"
+            android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_margin="10dip"
+    	    android:textSize="12sp"
+    	    android:textColor="#5e5858"
+    	    android:text="@string/param"/>      
+    </TableRow>
+    <TableRow >
+    	<TextView
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_vertical"
+        	android:textStyle="bold"
+        	android:text="@string/image" />
+        <Button
+            android:id="@+id/image_button"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="right|center_vertical"
+        	android:textSize="12sp"
+        	android:text="@string/upload" />
+    </TableRow>	
+    <TableRow>
+        <TextView
+            android:id="@+id/image_detail"
+            android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_margin="10dip"
+    	    android:textSize="12sp"
+    	    android:textColor="#5e5858"
+    	    android:text="@string/image"/>      
+    </TableRow>
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="@string/response"/>
+    </TableLayout>
+	<ScrollView 
+    	android:layout_width="match_parent"
+    	android:layout_height="200dip"
+    	android:orientation="vertical"
+        android:background="#5e5858">
+    <TextView
+        android:id="@+id/response_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:textColor="#ffffff"
+        android:text="@string/default_response"/>
+    </ScrollView>
+</LinearLayout>
